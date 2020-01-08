@@ -1,4 +1,4 @@
-package com.dimag.matematik.median;
+package com.dimag.matematik;
 
 import org.junit.Test;
 
@@ -7,11 +7,11 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
-public class MedianCalculatorTest {
+public class CalculatorMedianTest {
 
     @Test
     public void main() {
-        MedianCalculator medianCalculator = new MedianCalculator();
+        CalculatorMedian medianCalculator = new CalculatorMedian();
         List<Integer> list = new ArrayList<>();
         list.add(5);
         list.add(6);        //-222,1,2,5,6,226,227,228
@@ -22,14 +22,14 @@ public class MedianCalculatorTest {
         list.add(227);
         list.add(229);
 
-        int sonuc = (int) medianCalculator.median(MedianCalculator.sort(list));
+        int sonuc = (int) medianCalculator.median(CalculatorMedian.sort(list));
         assertEquals(5.5,sonuc,100);
 
     }
 
     @Test
     public void sort() {
-        MedianCalculator medianCalculator = new MedianCalculator();
+        CalculatorMedian medianCalculator = new CalculatorMedian();
         List<Integer> list = new ArrayList<>();
         list.add(1);
         list.add(5);
@@ -55,7 +55,7 @@ public class MedianCalculatorTest {
 
     @Test
     public void median() {
-        MedianCalculator medianCalculator = new MedianCalculator();
+        CalculatorMedian medianCalculator = new CalculatorMedian();
         List<Integer> list = new ArrayList<>();
         list.add(1);
         list.add(5);
